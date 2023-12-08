@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+
+</head>
+<title>Jogo da Velha</title>
+</head>
+
+<body>
+    <table></table>
+    <div class="container">
+        <div class="Cadastro">
+            <table>
+                <tr>
+                    <td>
+                        <label for="player 1">Jogador X:</label>
+                        <input type="text" id="player1" placeholder="Nome do Jogador 1">
+                    </td>
+                    <td>
+                        <label for="player 2">Jogador O:</label>
+                        <input type="text" id="player2" placeholder="Nome do Jogador 2">
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" value="Iniciar"
+                            style="margin-top:4px; height:25px; width:150px; font-size:14px" onclick="mostrar()" ; />
+                        <a href="computador.html">
+                            <button> Contra Computador</button>
+                        </a>
+                    </td>
+
+                </tr>
+            </table>
+        </div>
+
+        <h3 id="jogadorAtual"> </h3>
+
+
+        <div id="gameboard">
+            <table>
+                <tr>
+                    <td class="cell" onclick="cellClick(this, 0)"></td>
+                    <td class="cell" onclick="cellClick(this, 1)"></td>
+                    <td class="cell" onclick="cellClick(this, 2)"></td>
+                </tr>
+                <tr>
+                    <td class="cell" onclick="cellClick(this, 3)"></td>
+                    <td class="cell" onclick="cellClick(this, 4)"></td>
+                    <td class="cell" onclick="cellClick(this, 5)"></td>
+                </tr>
+                <tr>
+                    <td class="cell" onclick="cellClick(this, 6)"></td>
+                    <td class="cell" onclick="cellClick(this, 7)"></td>
+                    <td class="cell" onclick="cellClick(this, 8)"></td>
+                </tr>
+            </table>
+            <input type="button" value="Restart" id="Restart"
+                style="margin-top:4px; height:25px; width:150px; font-size:14px" onclick="Restart()">
+        </div>
+        <div id="scoreboard">
+            <p id="X"></p>
+            <p id="O"></p>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
